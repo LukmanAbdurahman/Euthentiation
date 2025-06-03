@@ -105,19 +105,12 @@ Proyek ini merupakan **Web Chatbot** interaktif berbasis web yang dilengkapi den
    git clone https://github.com/LukmanAbdurahman/chatbot-project.git
    ```
 
-2. **Masuk ke direktori proyek**:
-   ```bash
-   cd chatbot-project
-   ```
+2. **Pindahkan project ke htdoc di xampp**
 
-3. **Install dependensi Composer**:
+3. **Jalankan project di local**:
+   Akses Project dengan mengakses link
    ```bash
-   composer install
-   ```
-
-4. **Jalankan server Laravel**:
-   ```bash
-   php artisan serve
+   localhost/chatbot/resource/landingpage.php
    ```
 
 ---
