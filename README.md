@@ -62,24 +62,23 @@ Proyek ini merupakan **Web Chatbot** interaktif berbasis web yang dilengkapi den
 - **Frontend**: HTML, CSS (Bootstrap), JavaScript
 - **Database**: MySQL
 - **Testing Tools**: Manual Testing, Postman, Xdebug
-
 ---
 
 ## 📂 Struktur Direktori Utama
 
+```
 ├── public/
 ├── resources/
-│ ├── views/
-│ └── css/
+│   ├── views/
+│   └── css/
 ├── routes/
 ├── tests/
-│ ├── blackbox/
-│ ├── whitebox/
-│ └── greybox/
+│   ├── blackbox/
+│   ├── whitebox/
+│   └── greybox/
 ├── .env
 ├── composer.json
 └── README.md
-
 ```
 
 ---
