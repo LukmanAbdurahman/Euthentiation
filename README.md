@@ -69,14 +69,29 @@ Proyek ini merupakan **Web Chatbot** interaktif berbasis web yang dilengkapi den
 ```
 ├── public/
 ├── resources/
-│   ├── views/
-│   └── css/
-├── routes/
+│   ├── dashboard.php
+│   └── db.php
+│   └── forgot.php
+│   └── gemini.php
+│   └── lanfingpage.php
+│   └── login.php
+│   └── middleware.php
+│   └── register.php
+│   └── session.php
 ├── tests/
 │   ├── blackbox/
+│   │   └── test-cases-blackbox.md
+│   │   └── bug-report-blackbox.xlsx
+│   │   └── screenshot-blackbox/
 │   ├── whitebox/
+│   │   └── whitebox-flowchart.png
+│   │   └── unit-tests-results.md
+│   │   └── code-coverage-report/
 │   └── greybox/
-├── .env
+│   │   └── security-test-report.md
+│   │   └── api-test-results-postman.json
+│   │   └── simulated-attack-logs/
+├── summary
 ├── composer.json
 └── README.md
 ```
