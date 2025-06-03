@@ -67,3 +67,65 @@ Proyek ini merupakan **Web Chatbot** interaktif berbasis web yang dilengkapi den
 
 ## 📂 Struktur Direktori Utama
 
+├── public/
+├── resources/
+│ ├── views/
+│ └── css/
+├── routes/
+├── tests/
+│ ├── blackbox/
+│ ├── whitebox/
+│ └── greybox/
+├── .env
+├── composer.json
+└── README.md
+
+```
+
+---
+
+## ⚙️ Cara Menjalankan Proyek
+
+1. **Clone** repositori:
+   ```bash
+   git clone https://github.com/LukmanAbdurahman/chatbot-project.git
+   ```
+
+2. **Masuk ke direktori proyek**:
+   ```bash
+   cd chatbot-project
+   ```
+
+3. **Install dependensi Composer**:
+   ```bash
+   composer install
+   ```
+
+4. **Jalankan server Laravel**:
+   ```bash
+   php artisan serve
+   ```
+
+---
+
+## 📊 Hasil Uji & Dokumentasi
+
+- Dokumentasi hasil pengujian tersedia di folder `tests/`.
+- Mencakup:
+  - Studi kasus pengguna.
+  - Screenshot hasil uji.
+  - Catatan debugging dan validasi.
+
+---
+
+## 📃 Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+---
+
+## 📞 Kontak
+
+Untuk pertanyaan atau kontribusi, silakan hubungi:  
+📧 **lukman.abdurahman@email.com**  
+🔗 GitHub: [@username](https://github.com/LukmanAbdurahman)
