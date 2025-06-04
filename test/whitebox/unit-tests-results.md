@@ -1,17 +1,37 @@
+# Hasil Unit Testing
 
-# ✅ Unit Test Results - AuthTest (PHPUnit 9.6.23)
+## Framework
+- PHPUnit 9.6.23 by Sebastian Bergmann and contributors.
 
-## Test Summary
+---
 
-| Test Case                       | Result   | Notes                                           |
-|--------------------------------|----------|-------------------------------------------------|
-| Register with short username   | ✅ Passed | Username terlalu pendek ditolak                 |
-| Register with invalid email    | ✅ Passed | Format email tidak valid ditolak                |
-| Register with short password   | ✅ Passed | Password terlalu pendek ditolak                 |
-| Login success                  | ❌ Failed | Expected `'success'`, got `'Sukses'`            |
-| Login failure                  | ❌ Failed | Expected `'Email atau password salah!'`, got `'Gagal login'` |
-| Forgot password found          | ✅ Passed | Email ditemukan dan respons sesuai              |
-| Forgot password not found      | ✅ Passed | Email tidak ditemukan, respons sesuai           |
+## Total Tes
+**9 tests**, **7 passed**, **2 failed**, **0 errors**
+
+---
+
+## Ringkasan Pengujian
+
+### ✅ Auth Tests (7 total)
+
+| Test Case                          | Status  | Keterangan                                     |
+|-----------------------------------|---------|------------------------------------------------|
+| Register with short username      | ✅ Pass | Validasi nama pengguna pendek berhasil         |
+| Register with invalid email       | ✅ Pass | Validasi email tidak valid berhasil            |
+| Register with short password      | ✅ Pass | Validasi password pendek berhasil              |
+| Login success                     | ❌ Fail | Expected `'success'`, got `'Sukses'`           |
+| Login failure                     | ❌ Fail | Expected `'Email atau password salah!'`, got `'Gagal login'` |
+| Forgot password found             | ✅ Pass | Email ditemukan di sistem                      |
+| Forgot password not found         | ✅ Pass | Email tidak ditemukan di sistem                |
+
+---
+
+### ✅ Chatbot Tests (2 total)
+
+| Test Case          | Status  | Keterangan                                     |
+|--------------------|---------|------------------------------------------------|
+| Get reply success  | ✅ Pass | Mendapatkan jawaban dari chatbot        |
+| Get reply failure  | ✅ Pass | Input kosong diabaikan      |
 
 ---
 
@@ -66,10 +86,9 @@ $this->assertEquals("Gagal login", $result);
 
 **Tests:** 7  
 **Assertions:** 7  
-**Passed:** 5  
+**Passed:** 7  
 **Failed:** 2
 
 ```md
-✔️ 5 tests passed  
+✔️ 7 tests passed  
 ❌ 2 tests failed
-```
