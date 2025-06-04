@@ -18,7 +18,7 @@
 | 9  | Lupa Password | Email tidak terdaftar                   | Email salah            | Pesan error "Email tidak ditemukan"       | ✅     |
 | 10  | Chatbot       | Kirim pesan biasa                       | "Halo"                 | Chatbot merespon                          | ✅     |
 | 11  | Chatbot       | Kirim pesan kosong                      | ""                     | Chatbot menolak atau abaikan input kosong | ✅     |
-
+| 12 | Logout         | logout di pojok kanan atas              | klik                   | masuk ke halaman login kembali            | ✅     |
 ---
 
 ## ✅ 2. WHITE BOX TESTING
