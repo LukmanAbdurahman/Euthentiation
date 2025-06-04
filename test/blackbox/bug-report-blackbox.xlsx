@@ -1,1 +1,4 @@
+| No | Fitur  | Deskripsi Bug                                     | Langkah Reproduksi               | Expected Output                              | Actual Output         | Status |
+| -- | ------ | ------------------------------------------------- | -------------------------------- | -------------------------------------------- | --------------------- | ------ |
+| 1  | Logout | Tidak ada konfirmasi atau redirect setelah logout | Klik tombol logout setelah login | Tampil verifikasi & redirect ke landing page | Tidak ada verifikasi | Open   |
 
