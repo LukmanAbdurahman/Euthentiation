@@ -23,29 +23,37 @@
 
 ## ✅ 2. WHITE BOX TESTING
 
-**Metode**: Pengujian internal dengan memahami struktur kode, routing, dan logika aplikasi Laravel.
+**Metode**: Pengujian internal dengan memahami struktur kode, dan unit testing.
 
-**Komponen yang Dicek:**
+## Total Tes
+**9 tests**, **7 passed**, **2 failed**, **0 errors**
 
-* **Routing (`routes/web.php`)**:
+---
 
-  * Terlindungi middleware `auth`
-* **Controller**:
+## Ringkasan Pengujian
 
-  * Validasi menggunakan Laravel Validator
-  * Hashing password dengan `bcrypt`
-* **Keamanan**:
+### ✅ Auth Tests (7 total)
 
-  * Tidak ditemukan query mentah langsung (menggunakan Eloquent)
-  * Proteksi CSRF aktif
+| Test Case                          | Status  | Keterangan                                     |
+|-----------------------------------|---------|------------------------------------------------|
+| Register with short username      | ✅ Pass | Validasi nama pengguna pendek berhasil         |
+| Register with invalid email       | ✅ Pass | Validasi email tidak valid berhasil            |
+| Register with short password      | ✅ Pass | Validasi password pendek berhasil              |
+| Login success                     | ❌ Fail | Expected `'success'`, got `'Sukses'`           |
+| Login failure                     | ❌ Fail | Expected `'Email atau password salah!'`, got `'Gagal login'` |
+| Forgot password found             | ✅ Pass | Email ditemukan di sistem                      |
+| Forgot password not found         | ✅ Pass | Email tidak ditemukan di sistem                |
 
-**Kesimpulan**:
+---
 
-* Struktur aplikasi Laravel rapi
-* Validasi input kuat
-* Middleware dan session sudah digunakan dengan benar
-* Tidak ditemukan celah keamanan logis
+### ✅ Chatbot Tests (2 total)
 
+| Test Case          | Status  | Keterangan                                     |
+|--------------------|---------|------------------------------------------------|
+| Get reply success  | ✅ Pass | Mendapatkan jawaban dari chatbot        |
+| Get reply failure  | ✅ Pass | Input kosong diabaikan      |
+
+---
 ---
 
 ## ✅ 3. GREY BOX TESTING
