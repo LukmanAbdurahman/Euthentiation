@@ -8,9 +8,12 @@
 | No | Fitur         | Skenario                                | Input                  | Expected Output                           | Hasil |
 | -- | ------------- | --------------------------------------- | ---------------------- | ----------------------------------------- | ----- |
 | 1  | Login         | Login dengan data valid                 | Email & Password benar | Redirect ke chatbot atau dashboard        | ✅     |
-| 2  | Login         | Data tidak valid                        | Email salah            | Muncul pesan "Login gagal"                | ✅     |
+| 2  | Login         | Data tidak valid                        | Email salah            | Muncul pesan "Email dan Password Salah"                | ✅     |
+| 3  | Login         | Data tidak valid                        | Password salah            | Muncul pesan "Email dan Password Salah"                | ✅     |
+| 4  | Login         | Login dengan data kosong                 | Form tidak di isi | Muncul pesan keharusan mengisi form       | ✅     |
 | 3  | Register      | Registrasi akun baru dengan input valid | Nama, email, password  | Akun dibuat, redirect ke login            | ✅     |
 | 4  | Register      | Email sudah digunakan                   | Email ganda            | Pesan error "email telah digunakan"       | ✅     |
+| 4  | Register      | Registrasi dengan data kosong            | Form tidak di isi | Muncul pesan keharusan mengisi form       | ✅     |
 | 5  | Lupa Password | Email valid dikirimkan untuk reset      | Email valid            | Pesan sukses & link dikirim               | ✅     |
 | 6  | Lupa Password | Email tidak terdaftar                   | Email salah            | Pesan error "Email tidak ditemukan"       | ✅     |
 | 7  | Chatbot       | Kirim pesan biasa                       | "Halo"                 | Chatbot merespon                          | ✅     |
