@@ -1,65 +1,75 @@
-PHPUnit 9.6.23 by Sebastian Bergmann and contributors.
 
-Auth
- Γ£ö Register with short username
- Γ£ö Register with invalid email
- Γ£ö Register with short password
- Γ£ÿ Login success
-   Γöé
-   Γöé Failed asserting that two strings are equal.
-   Γöé --- Expected
-   Γöé +++ Actual
-   Γöé @@ @@
-   Γöé -'success'
-   Γöé +'Sukses'
-   Γöé
-   Γöé C:\xampp\htdocs\chatbotv2\tes\AuthTest.php:41
-   Γöé
+# ✅ Unit Test Results - AuthTest (PHPUnit 9.6.23)
 
- Γ£ÿ Login failure
-   Γöé
-   Γöé Failed asserting that two strings are equal.
-   Γöé --- Expected
-   Γöé +++ Actual
-   Γöé @@ @@
-   Γöé -'Email atau password salah!'
-   Γöé +'Gagal login'
-   Γöé
-   Γöé C:\xampp\htdocs\chatbotv2\tes\AuthTest.php:52
-   Γöé
+## Test Summary
 
- Γ£ö Forgot password found
- Γ£ö Forgot password not found
+| Test Case                       | Result   | Notes                                           |
+|--------------------------------|----------|-------------------------------------------------|
+| Register with short username   | ✅ Passed | Username terlalu pendek ditolak                 |
+| Register with invalid email    | ✅ Passed | Format email tidak valid ditolak                |
+| Register with short password   | ✅ Passed | Password terlalu pendek ditolak                 |
+| Login success                  | ❌ Failed | Expected `'success'`, got `'Sukses'`            |
+| Login failure                  | ❌ Failed | Expected `'Email atau password salah!'`, got `'Gagal login'` |
+| Forgot password found          | ✅ Passed | Email ditemukan dan respons sesuai              |
+| Forgot password not found      | ✅ Passed | Email tidak ditemukan, respons sesuai           |
 
-Time: 00:00.232, Memory: 6.00 MB
+---
 
-Summary of non-successful tests:
+## ❌ Detail Kegagalan
 
-Auth
- Γ£ÿ Login success
-   Γöé
-   Γöé Failed asserting that two strings are equal.
-   Γöé --- Expected
-   Γöé +++ Actual
-   Γöé @@ @@
-   Γöé -'success'
-   Γöé +'Sukses'
-   Γöé
-   Γöé C:\xampp\htdocs\chatbotv2\tes\AuthTest.php:41
-   Γöé
+### 1. `Login success`
+```
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'success'
++'Sukses'
+```
+**File & Line:** `tes/AuthTest.php:41`
 
- Γ£ÿ Login failure
-   Γöé
-   Γöé Failed asserting that two strings are equal.
-   Γöé --- Expected
-   Γöé +++ Actual
-   Γöé @@ @@
-   Γöé -'Email atau password salah!'
-   Γöé +'Gagal login'
-   Γöé
-   Γöé C:\xampp\htdocs\chatbotv2\tes\AuthTest.php:52
-   Γöé
+🛠️ **Solusi:**
+Ubah nilai yang diharapkan dari `'success'` menjadi `'Sukses'` di baris 41:
+```php
+$this->assertEquals("Sukses", $result);
+```
 
-FAILURES!
-Tests: 7, Assertions: 7, Failures: 2.
+---
 
+### 2. `Login failure`
+```
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'Email atau password salah!'
++'Gagal login'
+```
+**File & Line:** `tes/AuthTest.php:52`
+
+🛠️ **Solusi:**
+Ubah nilai yang diharapkan dari `'Email atau password salah!'` menjadi `'Gagal login'` di baris 52:
+```php
+$this->assertEquals("Gagal login", $result);
+```
+
+---
+
+## 📦 Sistem & Versi
+- PHP: 8.x (disarankan)
+- PHPUnit: 9.6.23
+- Server: XAMPP (localhost)
+
+---
+
+## 📌 Status Akhir
+
+**Tests:** 7  
+**Assertions:** 7  
+**Passed:** 5  
+**Failed:** 2
+
+```md
+✔️ 5 tests passed  
+❌ 2 tests failed
+```
